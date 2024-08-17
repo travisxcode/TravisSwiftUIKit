@@ -30,4 +30,8 @@ final class DIContainer {
   func resolveAddInventoryAlertModelMapper() -> AddInventoryAlertModelMapper {
     AddInventoryAlertModelMapperImpl()
   }
+  
+  func resolveImageCache() -> ImageCache {
+    ImageCacheImpl()
+  }
 }
