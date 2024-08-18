@@ -39,6 +39,9 @@
 		16AAECBA2C7087B100F7CEFE /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECB92C7087B100F7CEFE /* ImageCache.swift */; };
 		16AAECBC2C7089E700F7CEFE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECBB2C7089E700F7CEFE /* ImageLoader.swift */; };
 		16AAECBE2C708A5700F7CEFE /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECBD2C708A5700F7CEFE /* RemoteImageView.swift */; };
+		16AAECC12C70BC6A00F7CEFE /* PinterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC02C70BC6A00F7CEFE /* PinterestView.swift */; };
+		16AAECC32C70C94A00F7CEFE /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC22C70C94A00F7CEFE /* PinModel.swift */; };
+		16AAECC52C71A05B00F7CEFE /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC42C71A05B00F7CEFE /* PinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		16AAECB92C7087B100F7CEFE /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		16AAECBB2C7089E700F7CEFE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		16AAECBD2C708A5700F7CEFE /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		16AAECC02C70BC6A00F7CEFE /* PinterestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestView.swift; sourceTree = "<group>"; };
+		16AAECC22C70C94A00F7CEFE /* PinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
+		16AAECC42C71A05B00F7CEFE /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 				169479682C6ECFD400E969B0 /* CatFeed */,
 				1694798C2C6F800300E969B0 /* Inventory */,
 				16AAECB52C70864800F7CEFE /* ImageLoader */,
+				16AAECBF2C70BBF900F7CEFE /* Pinterest */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 				169479902C6F8C3200E969B0 /* AddInventoryForm.swift */,
 				1694799B2C6FA0A600E969B0 /* AlertModel.swift */,
 				169479A32C705E9700E969B0 /* Folder.swift */,
+				16AAECC22C70C94A00F7CEFE /* PinModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -344,6 +352,15 @@
 				16AAECBD2C708A5700F7CEFE /* RemoteImageView.swift */,
 			);
 			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		16AAECBF2C70BBF900F7CEFE /* Pinterest */ = {
+			isa = PBXGroup;
+			children = (
+				16AAECC02C70BC6A00F7CEFE /* PinterestView.swift */,
+				16AAECC42C71A05B00F7CEFE /* PinView.swift */,
+			);
+			path = Pinterest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,12 +512,15 @@
 				16AAECB72C70866800F7CEFE /* ImageLoaderFeedView.swift in Sources */,
 				169479A22C70210F00E969B0 /* InventoryListView.swift in Sources */,
 				1694797D2C6EFA3E00E969B0 /* CatEntity.swift in Sources */,
+				16AAECC12C70BC6A00F7CEFE /* PinterestView.swift in Sources */,
+				16AAECC52C71A05B00F7CEFE /* PinView.swift in Sources */,
 				169479A42C705E9700E969B0 /* Folder.swift in Sources */,
 				169479A72C705EB100E969B0 /* FolderView.swift in Sources */,
 				1694799A2C6F9FF200E969B0 /* AddInventoryAlertViewBuilder.swift in Sources */,
 				1694793B2C6EC35200E969B0 /* TravisSwiftUIKitApp.swift in Sources */,
 				169479802C6F249700E969B0 /* CatRepository.swift in Sources */,
 				169479912C6F8C3200E969B0 /* AddInventoryForm.swift in Sources */,
+				16AAECC32C70C94A00F7CEFE /* PinModel.swift in Sources */,
 				169479932C6F8E3D00E969B0 /* AddInventoryFormValidator.swift in Sources */,
 				1694796C2C6ED14D00E969B0 /* HomeView.swift in Sources */,
 			);
