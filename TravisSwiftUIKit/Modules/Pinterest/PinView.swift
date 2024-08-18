@@ -10,7 +10,7 @@ struct PinView: View {
     RemoteImageView(url: URL(string: pinModel.imageUrl)!, cache: cache)
       .aspectRatio(contentMode: .fill)
       .frame(width: pinModel.width, height: pinModel.height)
-      .cornerRadius(8)
+      .cornerRadius(12)
       .clipped()
   }
 }

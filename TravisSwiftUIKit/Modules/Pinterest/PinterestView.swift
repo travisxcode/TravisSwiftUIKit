@@ -1,6 +1,10 @@
 import SwiftUI
 import Combine
 
+fileprivate enum Constant {
+  static var padding: CGFloat = 8
+}
+
 final class PinterestViewModel: ObservableObject {
   enum Action {
     case fetchPins
@@ -8,9 +12,7 @@ final class PinterestViewModel: ObservableObject {
     case fetchPinsSuccess([PinModel])
     case fetchPinsFailure(Subscribers.Completion<any Error>)
   }
-  enum Constant {
-    static var padding = 6
-  }
+  
   private var cancellables = Set<AnyCancellable>()
   @Published var models = [[PinModel]]()
   private let col: Int
@@ -21,7 +23,7 @@ final class PinterestViewModel: ObservableObject {
   
   init(col: Int) {
     self.col = col
-    self.waterfallBuilder = WaterfallViewModelBuilder(col: col)
+    self.waterfallBuilder = DIContainer.shared.resolveWaterfallViewModelBuilder(col)
   }
   
   func perform(_ action: Action) {
@@ -45,7 +47,7 @@ final class PinterestViewModel: ObservableObject {
       guard col == self.col - 1 && row == models[col].count - 1 else { return }
       perform(.fetchPins)
     case .fetchPinsSuccess(let pinModels):
-      let totalPadding = CGFloat(col * Constant.padding)
+      let totalPadding = CGFloat(col) * Constant.padding
       let width = (UIScreen.main.bounds.width - totalPadding) / CGFloat(col)
       let pinModelsWithNomalizardHeight = pinModels.map {
         PinModel(id: $0.id, width: width, height: width * ($0.height / $0.width), imageUrl: $0.imageUrl)
@@ -67,9 +69,9 @@ struct PinterestView: View {
                              
   var body: some View {
     ScrollView {
-      HStack(alignment: .top, spacing: 6) {
+      HStack(alignment: .top, spacing: Constant.padding) {
         ForEach(0..<viewModel.models.count, id: \.self) { col in
-          LazyVStack(spacing: 6) {
+          LazyVStack(spacing: Constant.padding) {
             ForEach(viewModel.models[col].indices, id: \.self) { row in
               PinView(pinModel: viewModel.models[col][row], cache: cache)
                 .onAppear { viewModel.perform(.fetchPinsIfNeeed((row, col))) }
@@ -77,29 +79,9 @@ struct PinterestView: View {
           }
         }
       }
-      .padding(6)
+      .padding(.horizontal, Constant.padding)
     }
     .navigationTitle("Pinterest")
     .onAppear { viewModel.perform(.fetchPins) }
-  }
-}
-
-class WaterfallViewModelBuilder {
-  private var minHeap: [(i: Int, height: Double)]
-  private var waterfallModels: [[PinModel]]
-  
-  init(col: Int) {
-    minHeap = (0..<col).map { (i: $0, height: 0.0) }
-    waterfallModels = Array(repeating: [PinModel](), count: col)
-  }
-  
-  func build(models: [PinModel]) -> [[PinModel]] {
-    for model in models {
-      let minIndex = minHeap[0].i
-      waterfallModels[minIndex].append(model)
-      minHeap[0].height += model.height
-      minHeap.sort { $0.height == $1.height ? $0.i < $1.i : $0.height < $1.height }
-    }
-    return waterfallModels
   }
 }

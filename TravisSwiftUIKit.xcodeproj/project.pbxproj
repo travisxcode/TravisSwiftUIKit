@@ -42,6 +42,8 @@
 		16AAECC12C70BC6A00F7CEFE /* PinterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC02C70BC6A00F7CEFE /* PinterestView.swift */; };
 		16AAECC32C70C94A00F7CEFE /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC22C70C94A00F7CEFE /* PinModel.swift */; };
 		16AAECC52C71A05B00F7CEFE /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC42C71A05B00F7CEFE /* PinView.swift */; };
+		16AAECCD2C71C12A00F7CEFE /* CatToPinModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECCC2C71C12A00F7CEFE /* CatToPinModelMapper.swift */; };
+		16AAECCF2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECCE2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		16AAECC02C70BC6A00F7CEFE /* PinterestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestView.swift; sourceTree = "<group>"; };
 		16AAECC22C70C94A00F7CEFE /* PinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
 		16AAECC42C71A05B00F7CEFE /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		16AAECCC2C71C12A00F7CEFE /* CatToPinModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatToPinModelMapper.swift; sourceTree = "<group>"; };
+		16AAECCE2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallViewModelBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +361,8 @@
 		16AAECBF2C70BBF900F7CEFE /* Pinterest */ = {
 			isa = PBXGroup;
 			children = (
+				16AAECCC2C71C12A00F7CEFE /* CatToPinModelMapper.swift */,
+				16AAECCE2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift */,
 				16AAECC02C70BC6A00F7CEFE /* PinterestView.swift */,
 				16AAECC42C71A05B00F7CEFE /* PinView.swift */,
 			);
@@ -502,9 +508,11 @@
 				1694798B2C6F508D00E969B0 /* CatDetailView.swift in Sources */,
 				1694796E2C6ED41500E969B0 /* CatFeedView.swift in Sources */,
 				1694798F2C6F868E00E969B0 /* AddInventoryView.swift in Sources */,
+				16AAECCF2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift in Sources */,
 				169479792C6EF9E700E969B0 /* CatService.swift in Sources */,
 				16AAECBE2C708A5700F7CEFE /* RemoteImageView.swift in Sources */,
 				16AAECBA2C7087B100F7CEFE /* ImageCache.swift in Sources */,
+				16AAECCD2C71C12A00F7CEFE /* CatToPinModelMapper.swift in Sources */,
 				169479982C6F96FB00E969B0 /* InventoryItem.swift in Sources */,
 				16AAECBC2C7089E700F7CEFE /* ImageLoader.swift in Sources */,
 				169479702C6EEEC300E969B0 /* CatCardView.swift in Sources */,

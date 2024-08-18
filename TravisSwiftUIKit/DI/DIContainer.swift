@@ -34,4 +34,7 @@ final class DIContainer {
   func resolveImageCache() -> ImageCache {
     ImageCacheImpl()
   }
+  func resolveWaterfallViewModelBuilder(_ col: Int) -> WaterfallViewModelBuilder {
+    WaterfallViewModelBuilderImpl(col: col)
+  }
 }
