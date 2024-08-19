@@ -44,6 +44,7 @@
 		16AAECC52C71A05B00F7CEFE /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECC42C71A05B00F7CEFE /* PinView.swift */; };
 		16AAECCD2C71C12A00F7CEFE /* CatToPinModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECCC2C71C12A00F7CEFE /* CatToPinModelMapper.swift */; };
 		16AAECCF2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECCE2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift */; };
+		16AAECD42C71FD1C00F7CEFE /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AAECD32C71FD1C00F7CEFE /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		16AAECC42C71A05B00F7CEFE /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		16AAECCC2C71C12A00F7CEFE /* CatToPinModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatToPinModelMapper.swift; sourceTree = "<group>"; };
 		16AAECCE2C71C17D00F7CEFE /* WaterfallViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallViewModelBuilder.swift; sourceTree = "<group>"; };
+		16AAECD32C71FD1C00F7CEFE /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				1694798C2C6F800300E969B0 /* Inventory */,
 				16AAECB52C70864800F7CEFE /* ImageLoader */,
 				16AAECBF2C70BBF900F7CEFE /* Pinterest */,
+				16AAECD22C71FD0900F7CEFE /* Counter */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -369,6 +372,14 @@
 			path = Pinterest;
 			sourceTree = "<group>";
 		};
+		16AAECD22C71FD0900F7CEFE /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				16AAECD32C71FD1C00F7CEFE /* CounterView.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -516,6 +527,7 @@
 				169479982C6F96FB00E969B0 /* InventoryItem.swift in Sources */,
 				16AAECBC2C7089E700F7CEFE /* ImageLoader.swift in Sources */,
 				169479702C6EEEC300E969B0 /* CatCardView.swift in Sources */,
+				16AAECD42C71FD1C00F7CEFE /* CounterView.swift in Sources */,
 				1694799C2C6FA0A600E969B0 /* AlertModel.swift in Sources */,
 				16AAECB72C70866800F7CEFE /* ImageLoaderFeedView.swift in Sources */,
 				169479A22C70210F00E969B0 /* InventoryListView.swift in Sources */,

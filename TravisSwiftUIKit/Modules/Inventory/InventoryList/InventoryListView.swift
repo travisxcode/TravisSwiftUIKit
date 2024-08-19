@@ -43,21 +43,3 @@ struct InventoryListView: View {
     }
   }
 }
-//struct InventoryListView: View {
-//  @Query(sort: \InventoryItem.label, order: .forward) var items: [InventoryItem]
-//  var viewModel: InventoryListViewModel
-//  
-//  var body: some View {
-//    List {
-//      ForEach(items) { item in
-//        HStack {
-//          Text(item.label)
-//          Spacer()
-//          Text(item.creationTime, format: Date.FormatStyle(date: .omitted, time: .shortened))
-//        }
-//      }
-//      .onDelete { indexSet in viewModel.perform(.delete(indexSet, items)) }
-//    }
-//  }
-//}
-

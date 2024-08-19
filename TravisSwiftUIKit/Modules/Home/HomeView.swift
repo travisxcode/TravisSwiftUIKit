@@ -8,6 +8,7 @@ enum Page: String, CaseIterable {
   case folders = "🗂️ Folders (Tree)"
   case imageLoader = "🏞️ Image Loader (NSCache)"
   case pinterest = "📌 Pinterest (Waterfall)"
+  case counter = "📟 Counter (Combine)"
 }
 
 final class HomeViewModel: ObservableObject {
@@ -19,6 +20,7 @@ final class HomeViewModel: ObservableObject {
     case .folders: AnyView(RootFolderView())
     case .imageLoader: AnyView(ImageLoaderFeedView())
     case .pinterest: AnyView(PinterestView(col: 3))
+    case .counter: AnyView(CounterView())
     }
   }
 }
