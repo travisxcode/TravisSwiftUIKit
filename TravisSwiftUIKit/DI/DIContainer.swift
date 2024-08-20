@@ -5,7 +5,6 @@ import SwiftData
 
 final class DIContainer {
   static let shared = DIContainer()
-  
   private init() {}
   
   func resolveCatRepository() -> CatRepository {

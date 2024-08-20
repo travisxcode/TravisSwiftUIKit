@@ -8,7 +8,6 @@ final class ImageLoader: ObservableObject {
   @Published var image: UIImage?
   private var cache: ImageCache?
   private var cancellable: AnyCancellable?
-  private static let imageProcessingQueue = DispatchQueue(label: "image-processing")
 
   init(url: URL, cache: ImageCache? = nil) {
     self.cache = cache
@@ -36,3 +35,5 @@ final class ImageLoader: ObservableObject {
     cancellable?.cancel()
   }
 }
+
+
